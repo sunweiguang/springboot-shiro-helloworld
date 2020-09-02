@@ -33,6 +33,7 @@ public class UserController {
 
 	@RequestMapping("logon")
 	public ModelAndView login(HttpServletRequest req, Model model) {
+		
 		String exceptionClassName = (String) req.getAttribute("shiroLoginFailure");
 		String error = null;
 		if (UnknownAccountException.class.getName().equals(exceptionClassName)) {
